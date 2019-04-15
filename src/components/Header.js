@@ -6,17 +6,27 @@ function Header(){
     const date = new Date()
     const hours = date.getHours()
     let timeOfDay
-    if(hours<12)
+    const timeOfDayStyle = {
+            backgroundColor : "brown"
+        }
+    if(hours<12){
         timeOfDay = "Good Morning!!"
-    else if(hours >=12 && hours <16 )
+        timeOfDayStyle.color = "white"
+    }
+    else if(hours >=12 && hours <16 ){
         timeOfDay = "Good Afternoon!!"
-    else
+        timeOfDayStyle.color = "yellow"
+    }
+    else{
         timeOfDay = "Good Night!!"
+        timeOfDayStyle.color = "green"
+    }
+
     return(
         /*<h1 className="navbar">ToDo App - by {'${firstname} ${lastname}'}</h1>*/
         <div>
             <h1 className="navbar">ToDo App - by {firstname +" "+lastname}</h1>
-            <p style = {{color : "orange"}}> {timeOfDay}</p>
+            <p style = {timeOfDayStyle}> {timeOfDay}</p>
         </div>
     )
 }

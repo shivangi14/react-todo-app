@@ -1,11 +1,13 @@
 import React from "react"
 
+import ToDoItem from "./ToDoItem"
+
 function MainContent(){
     return(
-        <div>
-            <input type="checkbox" /><span>market</span><br/>
-            <input type="checkbox" /><span>slippers</span><br/>
-            <input type="checkbox" /><span>watch</span>
+        <div className = "toDoList">
+            <ToDoItem />
+            <ToDoItem />
+            <ToDoItem />
         </div>
     )
 }

@@ -5,13 +5,13 @@ import todosData from "./todosData"
 class MainContent extends React.Component{
     constructor(){
         super()
-        this.state = {todoItems : []}
+        this.state = {data : todosData}
     }
     render(){
-        this.state.todoItems = todosData.map(item => <ToDoItem key={item.id} item={item} />)
+        let todoItems = this.state.data.map(item => <ToDoItem key={item.id} item={item} />)
         return(
                 <div className = "toDoList">
-                    {this.state.todoItems}
+                    {todoItems}
                 </div>
             )
     }
